@@ -10,7 +10,7 @@ try:
 except Exception:
     # Default tools with no platform defaults to gnu toolchain.
     # We apply platform specific toolchains via our custom tools.
-    env = Environment(tools=["default"], PLATFORM="")
+    env = Environment(tools=["mingw"], PLATFORM="windows")
 
 env.PrependENVPath("PATH", os.getenv("PATH"))
 
